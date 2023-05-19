@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import MyToyRow from './MyToyRow';
 
 const MyToy = () => {
     const {user} = useContext(AuthContext)
@@ -15,12 +16,50 @@ const MyToy = () => {
         fetch(url)
         .then(res=> res.json())
         .then(data => {
-            console.log(data)
+            setToys(data)
         })
     },[])
     return (
         <div>
             <h2>My Toys</h2>
+            <div className="overflow-x-auto w-full">
+  <table className="table w-full">
+    {/* head */}
+    <thead>
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" className="checkbox" />
+          </label>
+        </th>
+        <th>Car Name + Category</th>
+        <th>Seller Name</th>
+        <th>Seller Email</th>
+        <th>Price</th>
+        <th>Rating</th>
+        <th>Quantity</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        {
+            toys.map(toy=> <MyToyRow
+            key={toy._id}
+            toy = {toy}
+            ></MyToyRow>)
+        }
+      
+     
+     
+      
+     
+    </tbody>
+   
+   
+    
+  </table>
+</div>
         </div>
     );
 };

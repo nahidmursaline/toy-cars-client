@@ -12,7 +12,7 @@ const AddToy = () => {
         const form= event.target;
 
         const name = form.name.value;
-        const sellerName = user?.name;
+        const sellerName = form.seller.value;
         const sellerEmail = user?.email;
         const category = form.category.value;
         const price = form.price.value;
