@@ -6,6 +6,7 @@ import Blogs from '../Pages/Blogs/Blogs';
 import Home from '../Pages/Home/Home/Home';
 import Login from '../Pages/Login/Login';
 import MyToy from '../Pages/MyToy/MyToy';
+import NotFound from '../Pages/NotFound/NotFound';
 import SignUp from '../Pages/SignUp/SignUp';
 import ToyDetails from '../Pages/ToyDetails/ToyDetails';
 import UpdateToy from '../Pages/UpdateToy/UpdateToy';
@@ -63,5 +64,9 @@ const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path: '/*',
+    element: <NotFound></NotFound>
+  }
 ]);
 export default router;
