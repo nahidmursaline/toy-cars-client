@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const SignUp = () => {
-    const {createUser} = useContext(AuthContext)
+    const {createUser, profileUpdate} = useContext(AuthContext)
+
+    const [error, setError] = useState('')
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -18,9 +20,15 @@ const SignUp = () => {
         createUser(email,password)
         .then(result => {
             const user = result.user
-            console.log(user)
+            console.log(user);
+            setError('')
+            event.target.reset();
+            profileUpdate({displayName: name, photoURL: photo})
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+          console.log(error)
+        setError(error.message)
+        })
 
 
     }
@@ -38,26 +46,26 @@ const SignUp = () => {
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input type="text" name='name' placeholder="Name" className="input input-bordered" />
+                <input type="text" name='name' placeholder="Name" className="input input-bordered" required/>
               </div>
             <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="text" name='email' placeholder="email" className="input input-bordered" />
+                <input type="text" name='email' placeholder="email" className="input input-bordered" required/>
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="text" name='password' placeholder="password" className="input input-bordered" />
+                <input type="text" name='password' placeholder="password" className="input input-bordered" required/>
                
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo URL</span>
                 </label>
-                <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" />
+                <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" required/>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
@@ -66,6 +74,9 @@ const SignUp = () => {
                
                 <input className="btn btn-error" type='submit' value= 'Sign Up'></input>
               </div>
+              <Form.Text className="text-danger">
+                   {error}
+               </Form.Text>
             </form>
             <p className='text-center my-4'>Already Have an Account? <Link className=' text-red-600 ' to='/login'>Log In</Link></p>
             </div>

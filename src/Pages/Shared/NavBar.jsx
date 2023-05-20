@@ -20,6 +20,9 @@ const NavBar = () => {
    
       <li><Link to='/addToy'>Add Toy</Link></li>
       <li><Link to='/allToy'>All Toy</Link></li>
+
+     
+            
       
      {user?.email? <>
       <li><Link to='/myToy'>My Toys</Link></li>
@@ -28,6 +31,9 @@ const NavBar = () => {
      </>:
     
     <li><Link to='/login'>Log In</Link></li>}
+     {
+              user && <img className='ms-4 rounded-full' title= {user.displayName}style={{"height" : "38px"}} src={user.photoURL} alt="" />
+            }
     
     </>
 
