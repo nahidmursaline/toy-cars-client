@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Form, Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const SignUp = () => {
     const {createUser, profileUpdate} = useContext(AuthContext)
 
     const [error, setError] = useState('')
+
+    const navigate = useNavigate();
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -21,8 +23,10 @@ const SignUp = () => {
         .then(result => {
             const user = result.user
             console.log(user);
+
             setError('')
             event.target.reset();
+            navigate('/login')
             profileUpdate({displayName: name, photoURL: photo})
         })
         .catch(error => {
@@ -74,9 +78,9 @@ const SignUp = () => {
                
                 <input className="btn btn-error" type='submit' value= 'Sign Up'></input>
               </div>
-              <Form.Text className="text-danger">
-                   {error}
-               </Form.Text>
+              <p className="text-red-500 mt-4">
+                {error}
+              </p>
             </form>
             <p className='text-center my-4'>Already Have an Account? <Link className=' text-red-600 ' to='/login'>Log In</Link></p>
             </div>
