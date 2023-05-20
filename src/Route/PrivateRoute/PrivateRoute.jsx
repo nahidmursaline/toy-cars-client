@@ -14,7 +14,7 @@ const PrivateRoute = ({children}) => {
         return children;
     }
 
-    return <Navigate to='/login' replace></Navigate>
+    return <Navigate to='/login' replace></Navigate> && alert('You have to log in first!')
 };
 
 export default PrivateRoute;

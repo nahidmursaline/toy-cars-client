@@ -15,24 +15,24 @@ const NavBar = () => {
 
     const navItems = 
     <>
-     <li><Link to='/'>Home</Link></li>
-     <li><Link to='/about'>About</Link></li>
+     <li><Link className="btn btn-outline btn-error border-none   me-3" to='/'>Home</Link></li>
+     <li><Link className="btn btn-outline btn-error border-none me-3" to='/blogs'>Blog</Link></li>
    
-      <li><Link to='/addToy'>Add Toy</Link></li>
-      <li><Link to='/allToy'>All Toy</Link></li>
+      <li><Link className="btn btn-outline btn-error border-none me-3" to='/addToy'>Add Toy</Link></li>
+      <li><Link className="btn btn-outline btn-error border-none me-3" to='/allToy'>All Toy</Link></li>
 
      
             
       
      {user?.email? <>
-      <li><Link to='/myToy'>My Toys</Link></li>
-      <li><button onClick={handleLogOut} className="btn btn-outline btn-error">Log Out</button></li>
+      <li><Link className="btn btn-outline btn-error border-none me-3" to='/myToy'>My Toys</Link></li>
+      <li><button onClick={handleLogOut} className="btn btn-outline btn-error border-none me-3">Log Out</button></li>
      
      </>:
     
-    <li><Link to='/login'>Log In</Link></li>}
+    <li><Link className="btn btn-outline btn-error border-none me-3" to='/login'>Log In</Link></li>}
      {
-              user && <img className='ms-4 rounded-full' title= {user.displayName}style={{"height" : "38px"}} src={user.photoURL} alt="" />
+              user && <img className='ms-4 rounded-full' title= {user.displayName}style={{"height" : "38px", "width" : "38px"}} src={user.photoURL} alt="" />
             }
     
     </>
@@ -52,7 +52,7 @@ const NavBar = () => {
             </ul>
           </div>
           <Link to='/' className=" mr-2 rounded-full "><img style={{ width:150}} src={logo} alt="" /></Link>
-          <h5 className='text-3xl '>Car Toy House</h5>
+          <h5 className='text-3xl font-bold '>Car Toy House</h5>
         </div>
           
         <div className="navbar-center hidden lg:flex">
@@ -60,9 +60,7 @@ const NavBar = () => {
            {navItems}
           </ul>
         </div>
-        <div className="navbar-end">
-        <button className="btn btn-outline btn-error">Appoinment</button>
-        </div>
+       
       </div>
     );
 };

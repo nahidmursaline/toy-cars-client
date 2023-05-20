@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Main from '../Layout/Main';
 import AddToy from '../Pages/AddToy/AddToy';
 import AllToys from '../Pages/AllToys/AllToys';
+import Blogs from '../Pages/Blogs/Blogs';
 import Home from '../Pages/Home/Home/Home';
 import Login from '../Pages/Login/Login';
 import MyToy from '../Pages/MyToy/MyToy';
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
         path: 'toyDetails/:id',
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5000/addToy/${params.id}`)
+      },
+      {
+        path: 'blogs',
+        element: <Blogs></Blogs>
       }
     ],
   },
