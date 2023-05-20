@@ -19,6 +19,7 @@ const NavBar = () => {
      <li><Link to='/about'>About</Link></li>
    
       <li><Link to='/addToy'>Add Toy</Link></li>
+      <li><Link to='/allToy'>All Toy</Link></li>
       
      {user?.email? <>
       <li><Link to='/myToy'>My Toys</Link></li>

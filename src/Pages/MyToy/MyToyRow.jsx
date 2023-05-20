@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MyToyRow = ({toy, handleDelete}) => {
+const MyToyRow = ({toy, handleDelete, handleUpdate}) => {
     const {_id,photo,name, sellerEmail,category,price, rating,quantity,description,sellerName } = toy;
 
 
@@ -38,10 +38,11 @@ const MyToyRow = ({toy, handleDelete}) => {
         <td>${price}</td>
         <td>{rating}</td>
         <td>{quantity}</td>
+        <td>{description}</td>
        
         
         <th>
-          <button className="btn btn-ghost btn-xs">{description}</button>
+          <button onClick={()=>handleUpdate(_id)} className="btn btn-error btn-xs">Update</button>
         </th>
       </tr>
     );

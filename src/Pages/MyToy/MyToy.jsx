@@ -38,6 +38,23 @@ const MyToy = () => {
             })
         }
     }
+
+    const handleUpdate = id => {
+        fetch(`http://localhost:5000/addToy/${id}`,{
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({status: 'updated'})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount > 0 ){
+
+            }
+        })
+    }
     
 
 
@@ -61,7 +78,7 @@ const MyToy = () => {
         <th>Rating</th>
         <th>Quantity</th>
         <th>Description</th>
-        <th></th>
+        <th>Update</th>
       </tr>
     </thead>
     <tbody>
@@ -70,6 +87,7 @@ const MyToy = () => {
             key={toy._id}
             toy = {toy}
             handleDelete = {handleDelete}
+            handleUpdate ={handleUpdate}
             ></MyToyRow>)
         }
       
