@@ -26,7 +26,7 @@ const AllToys = () => {
   // );
     return (
         <div>
-            <h2 className='text-center text-3xl font-bold my-20'>All Toy's: {toys.length}</h2>
+            <h2 className='text-center text-3xl font-bold my-20'>All Car Toy's: {toys.length}</h2>
 
             {/* <input onChange={handleSearch} type="search"  /> */}
 

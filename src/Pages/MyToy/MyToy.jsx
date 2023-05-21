@@ -57,7 +57,7 @@ const MyToy = () => {
 
   return (
     <div>
-      <h2 className='text-center font-bold my-20 text-xl mb-20'>My Toy's: {toys.length}</h2>
+      <h2 className='text-center font-bold my-20 text-xl mb-20'>My Car Toy's: {toys.length}</h2>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}

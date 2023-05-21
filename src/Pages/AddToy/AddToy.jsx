@@ -51,7 +51,7 @@ const AddToy = () => {
 
   return (
     <div>
-      <h1 className='text-center font-bold my-20 text-xl mb-20'>add toy's Here</h1>
+      <h1 className='text-center font-bold my-20 text-xl mb-20'>Add Toy's Here</h1>
 
       <form onSubmit={handleAddToy}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
