@@ -16,6 +16,7 @@ const ToyDetails = () => {
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">Toy Name: {name}</h2>
+          
           <p>Seller Name: {sellerName}</p>
           <p>Seller Email: {sellerEmail}</p>
           <p>Toy Category: {category}</p>

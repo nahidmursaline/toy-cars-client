@@ -22,8 +22,6 @@ const NavBar = () => {
       <li><Link className="btn btn-outline btn-error border-none me-3" to='/allToy'>All Toy</Link></li>
 
      
-            
-      
      {user?.email? <>
       <li><Link className="btn btn-outline btn-error border-none me-3" to='/addToy'>Add Toy</Link></li>
       <li><Link className="btn btn-outline btn-error border-none me-3" to='/myToy'>My Toys</Link></li>
