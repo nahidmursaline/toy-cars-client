@@ -18,13 +18,14 @@ const NavBar = () => {
      <li><Link className="btn btn-outline btn-error border-none   me-3" to='/'>Home</Link></li>
      <li><Link className="btn btn-outline btn-error border-none me-3" to='/blogs'>Blog</Link></li>
    
-      <li><Link className="btn btn-outline btn-error border-none me-3" to='/addToy'>Add Toy</Link></li>
+     
       <li><Link className="btn btn-outline btn-error border-none me-3" to='/allToy'>All Toy</Link></li>
 
      
             
       
      {user?.email? <>
+      <li><Link className="btn btn-outline btn-error border-none me-3" to='/addToy'>Add Toy</Link></li>
       <li><Link className="btn btn-outline btn-error border-none me-3" to='/myToy'>My Toys</Link></li>
       <li><button onClick={handleLogOut} className="btn btn-outline btn-error border-none me-3">Log Out</button></li>
      

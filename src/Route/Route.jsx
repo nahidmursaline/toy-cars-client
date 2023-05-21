@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'addToy',
-        element: <AddToy></AddToy>,
+        element: <PrivateRoute><AddToy></AddToy></PrivateRoute>,
       },
       {
         path: 'myToy',
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: 'toyDetails/:id',
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/addToy/${params.id}`)
+        loader: ({params})=> fetch(`https://toy-cars-server-omega.vercel.app/addToy/${params.id}`)
       },
       {
         path: 'blogs',
