@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Form, Link, useNavigate } from 'react-router-dom';
+import useHooks from '../../Hooks/UseHooks';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const SignUp = () => {
+  useHooks('Register')
     const {createUser, profileUpdate} = useContext(AuthContext)
 
     const [error, setError] = useState('')

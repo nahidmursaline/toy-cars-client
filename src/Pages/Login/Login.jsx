@@ -3,9 +3,11 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import app from '../../Firebase/firebase.config';
+import useHooks from '../../Hooks/UseHooks';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
+  useHooks('Login')
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
 

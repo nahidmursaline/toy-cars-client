@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useHooks from '../../Hooks/UseHooks';
 
 const UpdateToy = () => {
+  useHooks('Update Toy')
   const updateToy = useLoaderData();
   const { _id, name, quantity, description, price, rating } = updateToy;
 

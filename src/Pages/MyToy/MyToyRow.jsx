@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useHooks from '../../Hooks/UseHooks';
 
 const MyToyRow = ({toy, handleDelete, handleUpdate}) => {
+  useHooks('My Toy')
     const {_id,photo,name, sellerEmail,category,price, rating,quantity,description,sellerName } = toy;
 
 

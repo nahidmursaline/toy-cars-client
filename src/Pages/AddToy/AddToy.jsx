@@ -1,8 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
+import useHooks from '../../Hooks/UseHooks';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const AddToy = () => {
+  useHooks('Add Toy')
   const { user } = useContext(AuthContext);
 
   const handleAddToy = (event) => {

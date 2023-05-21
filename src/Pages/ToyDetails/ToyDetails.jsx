@@ -1,7 +1,9 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useHooks from '../../Hooks/UseHooks';
 
 const ToyDetails = () => {
+  useHooks('Toy Details')
     const toyDetails = useLoaderData();
     const {photo,name, sellerEmail,category,price, rating,quantity,description,sellerName} = toyDetails;
     return (

@@ -1,6 +1,8 @@
 import React from 'react';
+import useHooks from '../../Hooks/UseHooks';
 
 const Blogs = () => {
+    useHooks('Blogs')
     return (
         <div>
             <h4 className='text-center font-bold my-5 text-xl mb-10'>All Blogs Are Here</h4>
