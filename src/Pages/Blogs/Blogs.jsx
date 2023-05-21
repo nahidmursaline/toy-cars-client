@@ -5,7 +5,7 @@ const Blogs = () => {
     useHooks('Blogs')
     return (
         <div>
-            <h4 className='text-center font-bold my-5 text-xl mb-10'>All Blogs Are Here</h4>
+            <h4 className='text-center font-bold my-20 text-xl mb-20'>All Blogs Are Here</h4>
            
             <h3 className='font-bold'>What is an access token and refresh token? How do they work and where should we store them on the client-side?</h3>
             <p>Answer: Access token is a credential that is issued to a client by an authorization server after a successful authentication process. It represents the authorization granted to the client to access specific resources or perform certain actions on behalf of the authenticated user. <br />

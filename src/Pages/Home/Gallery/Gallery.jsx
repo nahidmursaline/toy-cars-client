@@ -13,8 +13,10 @@ import gallery11 from '../../../assets/Gallery/gallery11.jpg';
 
 const Gallery = () => {
     return (
-        <div>
-            <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className='my-20' data-aos="fade-up-left ">
+          <h2 className='text-center py-6 font-bold text-3xl'>Photo Gallery Of Car Toy's</h2>
+            <div  className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              
       <div className="p-4">
         <img src={gallery1} alt="Car 1" className="w-full h-auto" />
       </div>
@@ -34,13 +36,13 @@ const Gallery = () => {
         <img src={gallery6} alt="Car 2" className="w-full h-auto" />
       </div>
       <div className="p-4">
-        <img src={gallery7} alt="Car 2" className="w-full h-auto" />
+        <img src={gallery7} alt="Car 2" className="w-full h-full" />
       </div>
       <div className="p-4">
         <img src={gallery8} alt="Car 2" className="w-full h-auto" />
       </div>
       <div className="p-4">
-        <img src={gallery10} alt="Car 2" className="w-full h-auto" />
+        <img src={gallery10} alt="Car 2" className="w-full h-full" />
       </div>
       
     </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 import useHooks from '../../../Hooks/UseHooks';
 import Gallery from '../Gallery/Gallery';
+import SectionOne from '../SectionOne/SectionOne';
 import Slider from '../Slider/Slider';
+import SectionTwo from './SectionTwo/SectionTwo';
 
 const Home = () => {
     useHooks('Home')
@@ -9,7 +11,8 @@ const Home = () => {
         <div>
             <Slider></Slider>
             <Gallery></Gallery>
-            <h2>this is home</h2>
+            <SectionOne></SectionOne>
+            <SectionTwo></SectionTwo>
         </div>
     );
 };

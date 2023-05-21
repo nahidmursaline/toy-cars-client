@@ -6,7 +6,7 @@ import logo from '../../../assets/car-logo.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 py-6">
+        <footer className="bg-gray-900 py-6 mt-20">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4">
         <div className="flex items-center mb-4 lg:mb-0">
           <img  src={logo} alt="Car Toys Logo" className="w-12 h-12 mr-2 rounded-full" />
