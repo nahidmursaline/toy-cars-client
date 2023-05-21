@@ -7,6 +7,7 @@ const SectionTwo = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src={img} className="max-w-sm rounded-lg shadow-2xl ms-8" />
           <div >
+            
             <h1 className="text-3xl font-bold">Discover The Thrilling Adventure Of Our Toy Cars</h1>
 
             <h3 className="mt-6 font-bold">Exciting Features for Every Car Enthusiast</h3>
